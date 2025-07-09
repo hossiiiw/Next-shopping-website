@@ -15,6 +15,10 @@ function Navbar() {
       title: "Store",
       href: "/store",
     },
+    {
+      title: "Cart",
+      href: "/cart",
+    },
   ];
 
   return (
@@ -32,6 +36,8 @@ function Navbar() {
               </Link>
             );
           })}
+
+          <div></div>
         </div>
       </Container>
     </nav>
