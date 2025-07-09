@@ -14,6 +14,7 @@ type TShoppingCartContext = {
   cartItems: TCartItem[];
   handleIncreaseProductQty: (id: number) => void;
   handleDecreaseProductQty: (id: number) => void;
+  handleDeleteItem: (id: number) => void;
   GetItemQty: (id: number) => number;
   cartTotalQty: number;
 };
@@ -73,12 +74,21 @@ function ShoppingCartProvider({ children }: IContextType) {
     return cartItems.find((item) => item.id === id)?.qty || 0;
   };
 
+  //Delete Item
+  const handleDeleteItem = (id: number) => {
+    setCartItems((currentItem) => {
+      const deleteItem = cartItems.filter((item) => item.id !== id);
+      return deleteItem;
+    });
+  };
+
   return (
     <ShoppingCartContext.Provider
       value={{
         cartItems,
         handleIncreaseProductQty,
         handleDecreaseProductQty,
+        handleDeleteItem,
         GetItemQty,
         cartTotalQty,
       }}

@@ -7,6 +7,7 @@ function AddToCart({ id }: { id: string }) {
     cartItems,
     handleIncreaseProductQty,
     handleDecreaseProductQty,
+    handleDeleteItem,
     GetItemQty,
   } = useCart();
 
@@ -26,6 +27,13 @@ function AddToCart({ id }: { id: string }) {
         className="w-12 p-2 bg-sky-500 rounded mr-4 mt-4 font-bold text-white "
       >
         -
+      </button>
+
+      <button
+        onClick={() => handleDeleteItem(parseInt(id))}
+        className="bg-red-500 p-2 rounded font-bold text-white"
+      >
+        Delete Item
       </button>
     </div>
   );
