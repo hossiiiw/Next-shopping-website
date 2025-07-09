@@ -22,7 +22,6 @@ function AddToCart({ id }: { id: string }) {
       </button>
       <span className="text-sky-500 font-bold mx-4">{qty}</span>
       <button
-        // disabled={qty === 0 ? true : false}
         onClick={() => handleDecreaseProductQty(parseInt(id))}
         className="w-12 p-2 bg-sky-500 rounded mr-4 mt-4 font-bold text-white "
       >

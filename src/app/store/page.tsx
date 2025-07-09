@@ -3,7 +3,7 @@ import ProductItem from "@/components/ProductItem";
 import Link from "next/link";
 import React from "react";
 
-interface IProductType {
+export interface IProductType {
   id: string;
   image: string;
   title: string;
