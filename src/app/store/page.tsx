@@ -3,49 +3,25 @@ import ProductItem from "@/components/ProductItem";
 import Link from "next/link";
 import React from "react";
 
-function Store() {
-  const mockData = [
-    {
-      id: "1",
-      image:
-        "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png",
-      title: "Product 1",
-      description:
-        "Quas consequatur sed ad voluptatibus facilis fugiat laborum temporibus, atque quod enim quis dolorum aliquam unde impedit officiis itaque. Qui, consequatur quisquam!",
-      cost: 200,
-    },
-    {
-      id: "2",
-      image:
-        "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/14235/production/_100058428_mediaitem100058424.jpg.webp",
-      title: "Product 2",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
-      cost: 150,
-    },
-    {
-      id: "3",
-      image:
-        "https://static.vecteezy.com/system/resources/previews/025/220/125/non_2x/picture-a-captivating-scene-of-a-tranquil-lake-at-sunset-ai-generative-photo.jpg",
-      title: "Product 3",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
-      cost: 10,
-    },
-    {
-      id: "4",
-      image:
-        "https://cdn.prod.website-files.com/62d84e447b4f9e7263d31e94/6399a4d27711a5ad2c9bf5cd_ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-      title: "Product 3",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
-      cost: 400,
-    },
-  ];
+interface IProductType {
+  id: string;
+  image: string;
+  title: string;
+  description: string;
+  cost: number;
+}
+
+async function Store() {
+  const result = await fetch("http://localhost:3001/Product");
+  const data = (await result.json()) as IProductType[];
+
   return (
     <Container>
       <div className="w-full flex  p-4">
         <h1 className="mx-auto font-bold text-2xl text-red-600">Store</h1>
       </div>
-      <div className="grid grid-cols-4 gap-4 py-4 ">
-        {mockData.map((item) => {
+      <div className="grid sm:grid-cols-12 md:grid-cols-4  gap-4 py-4 ">
+        {data.map((item) => {
           return (
             <Link key={item.id} href={`/store/${item.id}`}>
               <ProductItem {...item} />

@@ -1,22 +1,40 @@
 import Container from "@/components/Container";
 import React from "react";
 
-function Product() {
+interface IProductProps {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{}>;
+}
+
+interface IDataType {
+  id?: string;
+  title?: string;
+  image?: string;
+  description?: string;
+  cost?: number;
+}
+
+async function Product({params}: IProductProps) {
+  const { id } = await params;
+  const result = await fetch(`http://localhost:3001/Product/${id}`);
+  const data = (await result.json()) as IDataType;
+
   return (
     <Container>
       <div className="w-full ">
         <div className="sm:w-[50%] sm:mt-4 sm:p-2  md:w-[700px] mx-auto grid-cols-12  bg-white shadow-xl p-4 mt-2">
           <img
             className="sm:w-[50%]  md:w-[600px] mx-auto"
-            src="https://cdn.prod.website-files.com/62d84e447b4f9e7263d31e94/6399a4d27711a5ad2c9bf5cd_ben-sweet-2LowviVHZ-E-unsplash-1.jpeg"
+            src={data.image}
             alt="image"
           />
 
           <div className="w-full mt-4 p-4">
-            <h2 className="shadow my-2">title</h2>
-            <p className="shadow my-2">description</p>
+            <h2 className="shadow my-2">{data.title}</h2>
+            <p className="shadow my-2">{data.description}</p>
             <p className="shadow my-2">
-              cost : <span className="text-sky-500 font-bold">200$</span>
+              cost :{" "}
+              <span className="text-sky-500 font-bold">{data.cost}$</span>
             </p>
 
             {/* <button className="w-44 mt-4 bg-red-400 p-2 font-bold text-white rounded">
