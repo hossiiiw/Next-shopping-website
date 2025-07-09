@@ -13,6 +13,7 @@ type TCartItem = {
 type TShoppingCartContext = {
   cartItems: TCartItem[];
   handleIncreaseProductQty: (id: number) => void;
+  handleDecreaseProductQty: (id: number) => void;
   GetItemQty: (id: number) => number;
   cartTotalQty: number;
 };
@@ -47,6 +48,26 @@ function ShoppingCartProvider({ children }: IContextType) {
     });
   };
 
+  const handleDecreaseProductQty = (id: number) => {
+    setCartItems((currentItems) => {
+      let isLastOne = currentItems.find((item) => item.id === id)?.qty === 1;
+      if (isLastOne) {
+        return currentItems.filter((item) => item.id !== id);
+      } else {
+        return currentItems.map((item) => {
+          if (item.id === id) {
+            return {
+              ...item,
+              qty: item.qty - 1,
+            };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
+  };
+
   //QTY
   const GetItemQty = (id: number) => {
     return cartItems.find((item) => item.id === id)?.qty || 0;
@@ -54,7 +75,13 @@ function ShoppingCartProvider({ children }: IContextType) {
 
   return (
     <ShoppingCartContext.Provider
-      value={{ cartItems, handleIncreaseProductQty, GetItemQty, cartTotalQty }}
+      value={{
+        cartItems,
+        handleIncreaseProductQty,
+        handleDecreaseProductQty,
+        GetItemQty,
+        cartTotalQty,
+      }}
     >
       {children}
     </ShoppingCartContext.Provider>
