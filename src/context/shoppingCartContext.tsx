@@ -6,7 +6,7 @@ interface IContextType {
 }
 
 type TCartItem = {
-  id: string;
+  id: number;
   qty: number;
 };
 
@@ -28,7 +28,7 @@ function ShoppingCartProvider({ children }: IContextType) {
   //add to cart
   const handleIncreaseProductQty = (id: number) => {
     setCartItems((currentItem) => {
-      let isNoProductExist = currentItem.find((item) => item.id == id) == null;
+      let isNoProductExist = currentItem.find((item) => item.id === id) == null;
 
       if (isNoProductExist) {
         return [...cartItems, { id: id, qty: 1 }];
