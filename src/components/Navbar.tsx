@@ -3,9 +3,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import Container from "./Container";
+import { useCart } from "@/context/shoppingCartContext";
 
 function Navbar() {
   const pathname = usePathname();
+  const { cartTotalQty } = useCart();
   const navLink = [
     {
       title: "Home",
@@ -14,10 +16,6 @@ function Navbar() {
     {
       title: "Store",
       href: "/store",
-    },
-    {
-      title: "Cart",
-      href: "/cart",
     },
   ];
 
@@ -37,7 +35,12 @@ function Navbar() {
             );
           })}
 
-          <div></div>
+          <div className="relative">
+            <span className="bg-sky-900 px-1 rounded-4xl absolute -top-0 -right-8 text-red-400">
+              {cartTotalQty}
+            </span>
+            <Link href={"/cart"}>Cart</Link>
+          </div>
         </div>
       </Container>
     </nav>

@@ -1,3 +1,4 @@
+import AddToCart from "@/components/AddToCart";
 import Container from "@/components/Container";
 import React from "react";
 
@@ -14,7 +15,7 @@ interface IDataType {
   cost?: number;
 }
 
-async function Product({params}: IProductProps) {
+async function Product({ params }: IProductProps) {
   const { id } = await params;
   const result = await fetch(`http://localhost:3001/Product/${id}`);
   const data = (await result.json()) as IDataType;
@@ -41,15 +42,7 @@ async function Product({params}: IProductProps) {
               Add
             </button> */}
 
-            <div>
-              <button className="w-12 p-2 bg-sky-500 rounded mr-4 mt-4 font-bold text-white">
-                +
-              </button>
-              <span className="text-sky-500 font-bold">1</span>
-              <button className="w-12 p-2 bg-sky-500 rounded ml-4 mt-4 font-bold text-white">
-                -
-              </button>
-            </div>
+            <AddToCart id={id} />
           </div>
         </div>
       </div>

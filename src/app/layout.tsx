@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import MainLayout from "@/components/MainLayout";
+import ShoppingCartProvider from "@/context/shoppingCartContext";
 
 export const metadata: Metadata = {
   title: "Home page",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-sky-200">
-        <MainLayout>{children}</MainLayout>
+        <ShoppingCartProvider>
+          <MainLayout>{children}</MainLayout>
+        </ShoppingCartProvider>
       </body>
     </html>
   );
