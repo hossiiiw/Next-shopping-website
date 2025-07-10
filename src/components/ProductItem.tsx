@@ -17,8 +17,12 @@ function ProductItem({
   cost,
 }: IProductItemProps) {
   return (
-    <div className="shadow p-2 bg-white">
-      <img className="h-44 w-full  " src={image} alt="image" />
+    <div className="shadow p-3 bg-white rounded-2xl">
+      <img
+        className="w-full duration-500 contrast-50 h-48 bg-gradient-to-bl from-black via-orange-900 to-indigo-600  hover:contrast-100"
+        src={image}
+        alt="image"
+      />
       <div className="p-2">
         <h3 className="font-bold text-xl">{title}</h3>
         <p className="line-clamp-2">{description}</p>
@@ -26,7 +30,7 @@ function ProductItem({
           price : <span className="text-sky-500">{FormatNumber(cost)}</span>
         </p>
       </div>
-      <button className="w-full bg-red-400 p-2 font-bold text-white rounded ">
+      <button className="w-full hover:bg-sky-700 text-gray-50 bg-sky-800 py-2 rounded-md ">
         Add{" "}
       </button>
     </div>

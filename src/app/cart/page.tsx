@@ -15,7 +15,7 @@ interface IDiscounttype {
 
 function Cart() {
   const [data, setData] = useState<IProductItemProps[]>([]);
-  const [discountCode, setDiscountCode] = useState<string>("");
+  const [discountCode, setDiscountCode] = useState("");
   const [finalPrice, setFinalPrice] = useState(0);
   const [discountPrice, setDiscountPrice] = useState(0);
   const { cartItems } = useCart();
@@ -37,12 +37,14 @@ function Cart() {
   const handleDiscountSubmit = () => {
     axios(`http://localhost:3001/discount?code=${discountCode}`).then(
       (response) => {
-        const data = response.data as IDiscounttype[];
-        let discountPrice = (totalPrice * data[0].percentage) / 100;
-        let finalPrice = totalPrice - discountPrice;
-        setFinalPrice(finalPrice);
-        setDiscountPrice(discountPrice);
-        setDiscountCode("");
+        if (discountCode) {
+          const data = response.data as IDiscounttype[];
+          let discountPrice = (totalPrice * data[0].percentage) / 100;
+          let finalPrice = totalPrice - discountPrice;
+          setFinalPrice(finalPrice);
+          setDiscountPrice(discountPrice);
+          setDiscountCode("");
+        }
       }
     );
   };

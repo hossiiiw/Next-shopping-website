@@ -16,14 +16,14 @@ function AddToCart({ id }: { id: string }) {
     <div>
       <button
         onClick={() => handleIncreaseProductQty(parseInt(id))}
-        className="w-12 p-2 bg-sky-500 rounded  mt-4 font-bold text-white"
+        className="w-12 p-2 bg-sky-800 hover:bg-sky-700 duration-300 rounded  mt-4 font-bold text-white"
       >
         +
       </button>
       <span className="text-sky-500 font-bold mx-4">{qty}</span>
       <button
         onClick={() => handleDecreaseProductQty(parseInt(id))}
-        className="w-12 p-2 bg-sky-500 rounded mr-4 mt-4 font-bold text-white "
+        className="w-12 p-2 bg-sky-800 hover:bg-sky-700 duration-300 rounded mr-4 mt-4 font-bold text-white "
       >
         -
       </button>
