@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 interface IContextType {
   children: React.ReactNode;
@@ -27,6 +27,24 @@ function ShoppingCartProvider({ children }: IContextType) {
     return totalQty + item.qty;
   }, 0);
 
+  //get item from local storage
+  useEffect(() => {
+    const storageCartItem = localStorage.getItem("cartItem");
+    if (storageCartItem) {
+      try {
+        const parsedItems = JSON.parse(storageCartItem) as TCartItem[];
+        setCartItems(parsedItems);
+      } catch (error) {
+        console.error("Failed to parse cart items", error);
+      }
+    }
+  }, []);
+
+  //set item in local storage
+  useEffect(() => {
+    localStorage.setItem("cartItem", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   //add to cart
   const handleIncreaseProductQty = (id: number) => {
     setCartItems((currentItem) => {
@@ -49,6 +67,7 @@ function ShoppingCartProvider({ children }: IContextType) {
     });
   };
 
+  //decrease item
   const handleDecreaseProductQty = (id: number) => {
     setCartItems((currentItems) => {
       let isLastOne = currentItems.find((item) => item.id === id)?.qty === 1;

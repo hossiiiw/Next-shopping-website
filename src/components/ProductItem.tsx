@@ -19,7 +19,7 @@ function ProductItem({
   return (
     <div className="shadow p-3 bg-white rounded-2xl">
       <img
-        className="w-full duration-500 contrast-50 h-48 bg-gradient-to-bl from-black via-orange-900 to-indigo-600  hover:contrast-100"
+        className="w-full rounded duration-500 contrast-50 h-48 bg-gradient-to-bl from-black via-orange-900 to-indigo-600  hover:contrast-100"
         src={image}
         alt="image"
       />

@@ -32,7 +32,6 @@ function Cart() {
     let selectedIem = data.find((product) => product.id === item.id.toString());
     return total + (selectedIem?.cost || 0) * item.qty;
   }, 0);
-
   // handle Discount
   const handleDiscountSubmit = () => {
     axios(`http://localhost:3001/discount?code=${discountCode}`).then(

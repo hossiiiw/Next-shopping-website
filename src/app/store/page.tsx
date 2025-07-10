@@ -20,7 +20,7 @@ async function Store() {
       <div className="w-full flex  p-4">
         <h1 className="mx-auto font-bold text-2xl text-red-600">Store</h1>
       </div>
-      <div className="grid sm:grid-cols-12 md:grid-cols-4  gap-4 py-4 ">
+      <div className="grid sm:grid-cols-12 md:grid-cols-2 lg:grid-cols-4  gap-4 py-4 ">
         {data.map((item) => {
           return (
             <Link key={item.id} href={`/store/${item.id}`}>
