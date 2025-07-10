@@ -1,5 +1,6 @@
 import AddToCart from "@/components/AddToCart";
 import Container from "@/components/Container";
+import { FormatNumber } from "@/utils/FormatNumber";
 import React from "react";
 
 interface IProductProps {
@@ -35,7 +36,9 @@ async function Product({ params }: IProductProps) {
             <p className="shadow my-2">{data.description}</p>
             <p className="shadow my-2">
               cost :{" "}
-              <span className="text-sky-500 font-bold">{data.cost}$</span>
+              <span className="text-sky-500 font-bold">
+                {FormatNumber(data.cost ?? 0)}
+              </span>
             </p>
 
             {/* <button className="w-44 mt-4 bg-red-400 p-2 font-bold text-white rounded">

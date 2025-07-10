@@ -1,3 +1,4 @@
+import { FormatNumber } from "@/utils/FormatNumber";
 import React from "react";
 
 export interface IProductItemProps {
@@ -22,7 +23,7 @@ function ProductItem({
         <h3 className="font-bold text-xl">{title}</h3>
         <p className="line-clamp-2">{description}</p>
         <p className="font-semibold">
-          price : <span className="text-sky-500">{cost}$</span>
+          price : <span className="text-sky-500">{FormatNumber(cost)}</span>
         </p>
       </div>
       <button className="w-full bg-red-400 p-2 font-bold text-white rounded ">
