@@ -30,7 +30,7 @@ function AddToCart({ id }: { id: string }) {
 
       <button
         onClick={() => handleDeleteItem(parseInt(id))}
-        className="bg-red-500 p-2 rounded font-bold text-white"
+        className="bg-red-500 p-2 rounded font-bold text-white mt-4 sm:mt-2"
       >
         Delete Item
       </button>

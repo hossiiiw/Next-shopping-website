@@ -5,7 +5,7 @@
       "image": "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png",
       "title": "Product 1",
       "description": "Quas consequatur sed ad voluptatibus facilis fugiat laborum temporibus, atque quod enim quis dolorum aliquam unde impedit officiis itaque. Qui, consequatur quisquam!",
-      "cost": 2000000
+      "cost": 1000000
     },
     {
       "id": "2",
@@ -28,5 +28,10 @@
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
       "cost": 4000000
     }
+  ],
+  "discount": [
+    { "id": "1", "code": "Off10", "percentage": 10 },
+    { "id": "2", "code": "Off20", "percentage": 20 },
+    { "id": "3", "code": "Off30", "percentage": 30 }
   ]
 }
