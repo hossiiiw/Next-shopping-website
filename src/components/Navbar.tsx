@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <nav className="p-4  font-bold text-white bg-sky-400">
-      <Container>
+      {/* <Container> */}
         <div className="flex gap-4">
           {navLink.map((item) => {
             return (
@@ -42,7 +42,7 @@ function Navbar() {
             <Link href={"/cart"}>Cart</Link>
           </div>
         </div>
-      </Container>
+      {/* </Container> */}
     </nav>
   );
 }

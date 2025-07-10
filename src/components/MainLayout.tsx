@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 interface ILayoutProps {
   children: React.ReactNode;
 }
@@ -8,6 +9,7 @@ function MainLayout({ children }: ILayoutProps) {
     <div>
       <Navbar />
       {children}
+      <Footer />
     </div>
   );
 }

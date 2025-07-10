@@ -23,7 +23,7 @@ async function Product({ params }: IProductProps) {
 
   return (
     <Container>
-      <div className="w-full ">
+      <div className="w-full p-6">
         <div className="sm:w-[50%] sm:mt-4 sm:p-2  md:w-[700px] mx-auto grid-cols-12  bg-white shadow-xl p-4 mt-2">
           <img
             className="sm:w-[50%]  md:w-[600px] mx-auto"
