@@ -1,14 +1,18 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { redirect, usePathname,  } from "next/navigation";
 import React from "react";
-import Container from "./Container";
 import { useCart } from "@/context/shoppingCartContext";
+import Cookies from "js-cookie";
 
 function Navbar() {
   const pathname = usePathname();
   const { cartTotalQty } = useCart();
   const navLink = [
+    {
+      title: "Login",
+      href: "/login",
+    },
     {
       title: "Dashboard",
       href: "/dashboard",
@@ -23,10 +27,18 @@ function Navbar() {
     },
   ];
 
+  const handleExit = () => {
+    Cookies.remove("token");
+    redirect("/login");
+  };
+
   return (
-    <nav className="p-4  font-bold text-white bg-sky-400">
+    <nav className="p-4 text-xs md:text-lg font-bold text-white bg-sky-400">
       {/* <Container> */}
       <div className="flex gap-4">
+        <button className="text-red-600 gont-bold" onClick={handleExit}>
+          Exit
+        </button>
         {navLink.map((item) => {
           return (
             <Link
