@@ -52,7 +52,7 @@ async function Store({ searchParams }: IStoreProps) {
       {" "}
       <Container>
         <Search />
-        <div className="w-full flex p-4  ">
+        <div className="w-full flex p-4 md:h-auto  ">
           <h1 className="mx-auto font-bold text-2xl text-red-600">Store</h1>
         </div>
         <div className="grid sm:grid-cols-12 md:grid-cols-2 lg:grid-cols-4  gap-4 py-4 ">
