@@ -151,11 +151,31 @@
       "description": "گوشی موبايل سامسونگ Galaxy A56 5G ظرفیت 256 گیگابایت رم 8 گیگابایت - ویتنام ",
       "cost": 50000,
       "color": "gold"
+    },
+    {
+      "id": "236.72900959316422",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThburv3AdQTYjkKTaxY-7PiTefhPh9IPGtuw&s",
+      "title": "camera",
+      "description": "دوربین کانن EOS R50، یکی از مدل‌های جدید دوربین‌های بدون‌آینه از برند کانن، برای عکس‌هایی که به‌دنبال قابلیت‌هایی حرفه‌ای و کیفیت تصاویر بالا هستند گزینه‌ای مناسب و مقرون‌به‌صرفه محسوب می‌شود.",
+      "cost": 600000000,
+      "color": "black"
     }
   ],
   "discount": [
-    { "id": "1", "code": "Off10", "percentage": 10 },
-    { "id": "2", "code": "Off20", "percentage": 20 },
-    { "id": "3", "code": "Off30", "percentage": 30 }
+    {
+      "id": "1",
+      "code": "Off10",
+      "percentage": 10
+    },
+    {
+      "id": "2",
+      "code": "Off20",
+      "percentage": 20
+    },
+    {
+      "id": "3",
+      "code": "Off30",
+      "percentage": 30
+    }
   ]
 }
