@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import Pagination from "@/components/Pagination";
 import ProductItem from "@/components/ProductItem";
+import Search from "@/components/Search";
 import Link from "next/link";
 import React from "react";
 
@@ -10,6 +11,7 @@ export interface IProductType {
   title: string;
   description: string;
   cost: number;
+  color: string;
 }
 
 export interface IProductList {
@@ -27,15 +29,21 @@ export interface IStoreProps {
   searchParams: Promise<{
     page: string;
     per_page: string;
+    title: string;
+    cost: string;
+    color: string;
   }>;
 }
 
 async function Store({ searchParams }: IStoreProps) {
   const page = (await searchParams).page ?? "1";
-  const per_page = (await searchParams).per_page ?? "2";
+  const per_page = (await searchParams).per_page ?? "5";
+  const title = (await searchParams).title ?? "";
+  const cost = (await searchParams).cost ?? "";
+  const color = (await searchParams).color ?? "";
 
   const result = await fetch(
-    `http://localhost:3001/Product?_page=${page}&_per_page=${per_page}`
+    `http://localhost:3001/Product?_page=${page}&_per_page=${per_page}&title=${title}&cost=${cost}&color=${color}`
   );
   const data = (await result.json()) as IProductList;
 
@@ -43,6 +51,7 @@ async function Store({ searchParams }: IStoreProps) {
     <>
       {" "}
       <Container>
+        <Search />
         <div className="w-full flex p-4  ">
           <h1 className="mx-auto font-bold text-2xl text-red-600">Store</h1>
         </div>

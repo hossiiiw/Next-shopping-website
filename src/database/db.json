@@ -3,114 +3,154 @@
     {
       "id": "1",
       "image": "https://www.technolife.com/image/small_product-TLP-76419_f1e2310c-8a01-47dc-8a9a-be4d02825825.png",
-      "title": "Xiaomi",
+      "title": "xiaomi",
       "description": "گوشی موبايل شیائومی مدل Redmi Note 14 4G ظرفیت 256 گیگابایت رم 8 گیگابایت",
-      "cost": 1000000
+      "cost": 1000000,
+      "color": "black"
     },
     {
       "id": "2",
       "image": "https://www.technolife.com/image/color_image_TLP-4993_ffffff_120d4a33-a52f-4dba-968d-dc2c0f386b1e.png",
       "title": "iPhone 13 ",
       "description": "گوشی موبایل اپل مدل iPhone 13 CH/A Not Active ظرفیت 128 گیگابایت - رم 4 گیگابایت ",
-      "cost": 1500000
+      "cost": 1500000,
+      "color": "gold"
     },
     {
       "id": "3",
       "image": "https://www.technolife.com/image/color_image_TLP-99485_4a8c190c-8178-4ac2-8b4e-d20516c5365f.png",
-      "title": "Sumsung",
+      "title": "sumsung",
       "description": "گوشی موبايل سامسونگ Galaxy A56 5G ظرفیت 256 گیگابایت رم 8 گیگابایت - ویتنام ",
-      "cost": 100000
+      "cost": 100000,
+      "color": "white"
     },
     {
       "id": "4",
       "image": "https://www.technolife.com/image/color_image_TLP-59177_383838_9be65b3c-ee1c-4c4a-9bcc-ac0503c245d7.png",
       "title": "iPhone 16 pro",
       "description": "گوشی موبایل اپل مدل iPhone 16 Pro Max ZA/A ظرفیت 256 گیگابایت رم 8 گیگابایت- Not Active ",
-      "cost": 4000000
+      "cost": 4000000,
+      "color": "black"
     },
     {
       "id": "5",
       "image": "https://www.technolife.com/image/color_image_TLP-60342_28d335a0-3d29-4a41-b5f8-33596424db32.png",
-      "title": "Xiaomi",
+      "title": "xiaomi",
       "description": "گوشی موبايل شیائومی مدل 14T Pro ظرفیت 512 گیگابایت رم 12 گیگابایت",
-      "cost": 400000
+      "cost": 400000,
+      "color": "white"
     },
     {
       "id": "6",
       "image": "https://www.technolife.com/image/small_product-TLP-76419_f1e2310c-8a01-47dc-8a9a-be4d02825825.png",
-      "title": "Xiaomi",
+      "title": "xiaomi",
       "description": "گوشی موبايل شیائومی مدل Redmi Note 14 4G ظرفیت 256 گیگابایت رم 8 گیگابایت",
-      "cost": 1000000
+      "cost": 1000000,
+      "color": "black"
     },
     {
       "id": "7",
       "image": "https://www.technolife.com/image/color_image_TLP-4993_ffffff_120d4a33-a52f-4dba-968d-dc2c0f386b1e.png",
       "title": "iPhone 13 ",
       "description": "گوشی موبایل اپل مدل iPhone 13 CH/A Not Active ظرفیت 128 گیگابایت - رم 4 گیگابایت ",
-      "cost": 1500000
+      "cost": 1500000,
+      "color": "black"
     },
     {
       "id": "8",
       "image": "https://www.technolife.com/image/color_image_TLP-99485_4a8c190c-8178-4ac2-8b4e-d20516c5365f.png",
-      "title": "Sumsung",
+      "title": "sumsung",
       "description": "گوشی موبايل سامسونگ Galaxy A56 5G ظرفیت 256 گیگابایت رم 8 گیگابایت - ویتنام ",
-      "cost": 100000
+      "cost": 1000000,
+      "color": "white"
     },
     {
       "id": "9",
       "image": "https://www.technolife.com/image/color_image_TLP-59177_383838_9be65b3c-ee1c-4c4a-9bcc-ac0503c245d7.png",
       "title": "iPhone 16 pro",
       "description": "گوشی موبایل اپل مدل iPhone 16 Pro Max ZA/A ظرفیت 256 گیگابایت رم 8 گیگابایت- Not Active ",
-      "cost": 4000000
+      "cost": 4000000,
+      "color": "black"
     },
     {
       "id": "10",
       "image": "https://www.technolife.com/image/color_image_TLP-60342_28d335a0-3d29-4a41-b5f8-33596424db32.png",
-      "title": "Xiaomi",
+      "title": "xiaomi",
       "description": "گوشی موبايل شیائومی مدل 14T Pro ظرفیت 512 گیگابایت رم 12 گیگابایت",
-      "cost": 400000
+      "cost": 400000,
+      "color": "white"
     },
     {
       "id": "11",
       "image": "https://www.technolife.com/image/color_image_TLP-60342_28d335a0-3d29-4a41-b5f8-33596424db32.png",
-      "title": "Xiaomi",
+      "title": "xiaomi",
       "description": "گوشی موبايل شیائومی مدل 14T Pro ظرفیت 512 گیگابایت رم 12 گیگابایت",
-      "cost": 400000
+      "cost": 400000,
+      "color": "gold"
     },
     {
       "id": "12",
       "image": "https://www.technolife.com/image/small_product-TLP-76419_f1e2310c-8a01-47dc-8a9a-be4d02825825.png",
       "title": "Xiaomi",
       "description": "گوشی موبايل شیائومی مدل Redmi Note 14 4G ظرفیت 256 گیگابایت رم 8 گیگابایت",
-      "cost": 1000000
+      "cost": 1000000,
+      "color": "black"
     },
     {
       "id": "13",
       "image": "https://www.technolife.com/image/color_image_TLP-4993_ffffff_120d4a33-a52f-4dba-968d-dc2c0f386b1e.png",
       "title": "iPhone 13 ",
       "description": "گوشی موبایل اپل مدل iPhone 13 CH/A Not Active ظرفیت 128 گیگابایت - رم 4 گیگابایت ",
-      "cost": 1500000
+      "cost": 1500000,
+      "color": "gold"
     },
     {
       "id": "14",
       "image": "https://www.technolife.com/image/color_image_TLP-99485_4a8c190c-8178-4ac2-8b4e-d20516c5365f.png",
-      "title": "Sumsung",
+      "title": "sumsung",
       "description": "گوشی موبايل سامسونگ Galaxy A56 5G ظرفیت 256 گیگابایت رم 8 گیگابایت - ویتنام ",
-      "cost": 100000
+      "cost": 1500000,
+      "color": "white"
     },
     {
       "id": "15",
       "image": "https://www.technolife.com/image/color_image_TLP-59177_383838_9be65b3c-ee1c-4c4a-9bcc-ac0503c245d7.png",
       "title": "iPhone 16 pro",
       "description": "گوشی موبایل اپل مدل iPhone 16 Pro Max ZA/A ظرفیت 256 گیگابایت رم 8 گیگابایت- Not Active ",
-      "cost": 4000000
+      "cost": 4000000,
+      "color": "black"
     },
     {
       "id": "16",
       "image": "https://www.technolife.com/image/color_image_TLP-60342_28d335a0-3d29-4a41-b5f8-33596424db32.png",
-      "title": "Xiaomi",
+      "title": "xiaomi",
       "description": "گوشی موبايل شیائومی مدل 14T Pro ظرفیت 512 گیگابایت رم 12 گیگابایت",
-      "cost": 400000
+      "cost": 400000,
+      "color": "white"
+    },
+    {
+      "id": "17",
+      "image": "https://www.technolife.com/image/color_image_TLP-99485_4a8c190c-8178-4ac2-8b4e-d20516c5365f.png",
+      "title": "sumsung",
+      "description": "گوشی موبايل سامسونگ Galaxy A56 5G ظرفیت 256 گیگابایت رم 8 گیگابایت - ویتنام ",
+      "cost": 320000,
+      "color": "gold"
+    },
+    {
+      "id": "18",
+      "image": "https://www.technolife.com/image/color_image_TLP-99485_4a8c190c-8178-4ac2-8b4e-d20516c5365f.png",
+      "title": "iphone",
+      "description": "گوشی موبايل سامسونگ Galaxy A56 5G ظرفیت 256 گیگابایت رم 8 گیگابایت - ویتنام ",
+      "cost": 130000,
+      "color": "gold"
+    },
+    {
+      "id": "19",
+      "image": "https://www.technolife.com/image/color_image_TLP-99485_4a8c190c-8178-4ac2-8b4e-d20516c5365f.png",
+      "title": "xiaomi",
+      "description": "گوشی موبايل سامسونگ Galaxy A56 5G ظرفیت 256 گیگابایت رم 8 گیگابایت - ویتنام ",
+      "cost": 50000,
+      "color": "gold"
     }
   ],
   "discount": [

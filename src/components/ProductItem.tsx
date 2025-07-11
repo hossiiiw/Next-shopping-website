@@ -7,6 +7,7 @@ export interface IProductItemProps {
   image: string;
   description: string;
   cost: number;
+  color: string;
 }
 
 function ProductItem({
@@ -15,6 +16,7 @@ function ProductItem({
   image,
   description,
   cost,
+  color,
 }: IProductItemProps) {
   return (
     <div className="shadow p-3 bg-white rounded-2xl">
@@ -26,6 +28,7 @@ function ProductItem({
       <div className="p-2">
         <h3 className="font-bold text-xl">{title}</h3>
         <p className="line-clamp-2">{description}</p>
+        <p>Color : {color}</p>
         <p className="font-semibold">
           price : <span className="text-sky-500">{FormatNumber(cost)}</span>
         </p>
